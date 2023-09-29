@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.title {
+    font-size: 72px;
+    background: linear-gradient(to bottom, #7e89f9cc, #bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+.item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    animation: move 3s infinite ease alternate;
+}
+.desc {
+    font-size: 24px;
+    font-weight: 300;
+
+}
+@keyframes move {
+    from {
+      transform: translateY(-15px);
+    }
+    to {
+      transform: translateY(0px) scale(1.03);
+    }
+}
+.button {
+    padding: 20px;
+    background-color: #7e89f9cc;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    width: max-content;
+}
