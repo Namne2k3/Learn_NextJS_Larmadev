@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './page.module.css'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import Button from '@/components/button/Button'
 const handleSubmit = async (e) => {
   e.preventDefault();
   const email = e.target[0].value ;
@@ -40,6 +41,7 @@ const Login = () => {
         <button className={styles.button}>Login</button>
       </form>
       <button onClick={() => signIn("google")} className={styles.button}>Login with Google</button>
+      <Button url="/dashboard/register" text="Register" />
     </div>
   )
 }

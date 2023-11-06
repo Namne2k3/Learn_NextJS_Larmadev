@@ -41,11 +41,11 @@ const links = [
 const Navbar = () => {
 
   const session = useSession();
-  const router = useRouter();
 
   return (
     <div className={styles.container}>
       <Link href="/" className={`${styles.logo} text-[20px]`}>Next Page</Link>
+
       <div className={styles.links}>
         <DarkModeToggle />
         {links.map(link => 
@@ -61,6 +61,7 @@ const Navbar = () => {
             </button>
         }
       </div>
+      
     </div>
   )
 }

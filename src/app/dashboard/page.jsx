@@ -95,10 +95,10 @@ const DashBoard = () => {
           {isLoading ? "loading..." : data?.map((post) => (
             <div className={styles.post} key={post._id}>
               <Link href={`blog/${post._id}`} className={styles.post}>
-                <div className={styles.imgContainer}>
+                <div className={`${styles.imgContainer}`}>
                   <Image src={post.img} alt='' width={100} height={100} />
                 </div>
-                <div className={styles.info}>
+                <div className={`${styles.info} flex-2`}>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <p>{post.desc}</p>
                 </div>

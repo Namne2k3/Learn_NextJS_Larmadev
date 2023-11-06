@@ -12,6 +12,7 @@ export const GET = async (request) => {
 
         // Nếu có username thì trả về post có username đó , không thì trả về toàn bộ
         const posts = await Post.find(username && { username });
+
         return new NextResponse(JSON.stringify(posts), { status: 200} );
     } catch (err) {
         return new NextResponse("Database Error", { status: 500} );
